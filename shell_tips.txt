@@ -1,22 +1,22 @@
-1-we can see details of file with ls -ltrh (x KB )
+1-we can see details of file with ls -ltrh (x KB)
 
-2- we can use ( file <filname> ) to see format of a file 
+2- we can use (file <filname>) to see formats of a file 
 
 3- we can copy a file like this =>
 cp ~/Pictures/screenshot.png (new_name_for_file) 
-we have to be in directory we want to copy new file !
+we have to be in the directory we want to copy new file!
 
 4- we can convert a file like copy ->
 convert ~/Pictures/screenshot.png screenshot.gif
-like this we make a copy and already it's convert to gif instead of png !
+like this we make a copy and already it's convert to gif instead of png!
 
-5- xdg-open <file name> like double click in file ! it will open the file
+5- xdg-open <file name> like double-click in file! It will open the file
 
-6- we can see the format of file with asci and hex and etc with this command 
+6- we can see the format of file with ascii and hex and etc with this command 
 od <fileName> | head
-head show least data 
-but still it's not human readable !
-we have to use -->
+head show the least data 
+but still it's not human readable!
+We have to use -->
 od -a <filename> | head
 
 7- we can use hexedit to edit the signature of a file ( change the file format to encrypt and interrupt that ) with hexedit
@@ -24,53 +24,55 @@ od -a <filename> | head
 hexedit <fileName>
 we can edit and use f1 will show the help -- f2 will save -- CTRL + x will save and exit
 
-8- feh <fileName> ( will open the file)
+8- feh <fileName> (will open the file)
 
-we can use this command to copy a file at the same place :
-1- cp test.txt copyTest.txt ( We copy our test to a new file named copyTest)
+We can use this command to copy a file at the same place :
+1- cp test.txt copyTest.txt (We copy our test to a new file named copyTest)
 
-we can also copy multi file into another directory like below
-2- cp new newfile mostafa.txt myjob --> all of the files will copy to last directory --> it means just the last name(must be directory) will copy all files in itself .
+We can also copy multi file into another directory like below
+2- cp new newfile mostafa.txt myjob --> all of the files will copy to last directory --> it means just the last name(must be directory) will copy all files in itself.
 
 ---------------------------------Move---------------------------------------
-we can cut and paste a file with new name use 'mv' command -->
-mv new old --> it will change the name of new file to old with all content
+We can cut-and-paste a file with 'mv' command -->
+1- mv test.py ~/Document/py_project --> it will move the test.py file to py_project directory
 
-we can also move multi files to a direcory like this -->
+We can also move multi files to a directory like this -->
 2- mv old test tips mydir/
-it will cut and paste the three files and move them to the mydir direcroty !
+it will cut-and-paste the three files and move them to the mydir directory!
 
-by the way we can change the names of file or directory with mv commnad -->
+By the way we can change the name of files or directories with 'mv' command -->
 3- mv mydir mydirecotry --> mydir name changed to mydirectory with all contents
 
 ------------------------------Remove----------------------------------------
-we can remove file and directory with this command -->
+We can remove file and directory with this command -->
 rm myfile --> remove the file // rmdir mydir --> will remove our directory
 
 Hint --> if we want to create a nested directory for example create a mydir/test/mostafa --> we can't use mkdir mydir/test/mostafa
-we have tp used -p switch to do that (-p means parent it will create directories in parent easily)
+we have to use -p switch to do that (-p means parent it will create directories in the parent easily)
 mkdir -p mydir/test/mostafa
 
-tip --> we can back directory two or second time with this command -->
+Tip --> we can back directory two or second time with this command -->
 cd ../../..
 
-hint --> we can't remove a directory that has a file or another directory
+Hint --> we can't remove a directory that has a file or another directory
 solution --> we can use ls -r  OR ls -R to recursive -->
-we can't copy a directory to another directory we have to use -r switch
 
-cp -r mydir seconddir 
+we can't copy a directory to another directory we have to use -r switch:
+cp -r mydir anotherdir 
 
-for removing the directory that contains file or another directory we have to use -r switch again --> rm -r mydir (will delete my dir and all files and directory of that)
+For removing the directory that contains file or another directory we have to use -r switch again --> rm -r mydir (will delete my dir and all files and directory of that)
+
+To remove a file whose name starts with a '-', for example '-myfile', use one of these commands --> rm -- -myfile or rm ./-myfile
+
 -----------------------------------Tip--------------------------------------
-if we copy a file to another existing file the second file will be lost contents and overwrite with the first file !
-solutions ------> we can use -i switch to interactive 
-cp -i first second --> cp:overwrite second ? and we can cancel that 
+If we copy a file to another existing file the second file will be lost contents and overwrite with the first file!
+Solution ------> we can use -i switch to interactive 
+cp -i first second --> cp:overwrite second? and we can cancel that 
 
-we can use -b switch to make a backup -->
-cp -b test test_2 ---> it will create a new file named test_2~ (~ means back up)
-and then overwrite the first file in second file
+We can use -b switch to make a backup -->
+cp -b test test_2 ---> it will create a new file named test_2~ (~ means back up) and then overwrite the first file in second file
 
-Another Important Switch for Copy --> -p -> cp -p first second --> it will save the detail of attribites like -> Date - Time - access
+Another Important Switch for Copy --> -p -> cp -p first second --> it will save the detail of attributes like -> Date - Time - access
 
 -f is default and force the file to overwrite without permission
 
